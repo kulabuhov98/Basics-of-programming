@@ -18,7 +18,8 @@ def buildingLadder(n):
             print(j, end="")
         print()
 
-if n > 9 or n <= 0:
-    print ("Количество ступенек лесенки должно быть больше 0 и меньше 10.")
+if n > 9 or n <= 1:
+    print ("Количество ступенек лесенки должно быть больше 1 и меньше 10.")
 else:
+    print("Лесенка из " + str(n) + " ступенек:")
     buildingLadder(n)
