@@ -18,4 +18,7 @@ def buildingLadder(n):
             print(j, end="")
         print()
 
-buildingLadder(n)
+if n > 9:
+    print ("Количество ступенек лесенки не может быть больше 9.")
+else:
+    buildingLadder(n)
