@@ -9,9 +9,11 @@
     Задание 4. Переменная seconds хранит в себе некоторое количество секунд. Переведите это число в дни:часы:минуты:секунды.
 """
 
-seconds = int(input("Введите некоторое количество секунд: "))
-
 def dateTime(seconds):
-    return str(seconds // 86400) + ":" + str(seconds % 86400 // 3600) + ":" + str(seconds % 3600 // 60) + ":" + str(seconds % 3600 % 60) + "."
+    print(str(seconds // 86400) + ":" + str(seconds % 86400 // 3600) + ":" + str(seconds % 3600 // 60) + ":" + str(seconds % 3600 % 60) + ".")
 
-print(dateTime(seconds))
+try:
+    seconds = int(input("Введите некоторое количество секунд: "))
+    dateTime(seconds)
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
