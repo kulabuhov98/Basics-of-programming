@@ -11,12 +11,15 @@
     Стоит помнить, что в соответствии с григорианским календарем, год является високосным, если его номер кратен 4, но не кратен 100, а также если он кратен 400.
 """
 
-year = int(input("Введите год: "))
-
+# Определение високосного года
 def checkLeapYear(year):
     if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
         print("Да.")
     else:
         print("Нет.")
 
-checkLeapYear(year)
+try:
+    year = int(input("Введите год: "))
+    checkLeapYear(year)
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
