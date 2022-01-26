@@ -34,8 +34,6 @@ def ageAndNameAnalysis(age, name):
 try:
     age = int(input("Введите возраст: "))
     name = input("Введите имя: ")
-    
-    print()
     ageAndNameAnalysis(age, name)
 except ValueError:
     print("Critical error! Exception has occurred: ValueError!")
