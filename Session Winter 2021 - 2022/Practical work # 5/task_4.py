@@ -11,9 +11,7 @@
     Программа получает на вход действительные числа X и Y и должна вывести одно натуральное число.
 """
 
-x = float(input("Введите, сколько километров спортсмен пробежал в первый день: "))
-y = float(input("Введите, сколько километров спортсмен пробежал всего: "))
-
+# Нахождение количества дней тренировок
 def numberOfTrainingDays(x, y):
     day = 1
 
@@ -23,4 +21,9 @@ def numberOfTrainingDays(x, y):
     
     print(str(y) + " километров пробежал спортсмен за " + str(day) + " дней.")
 
-numberOfTrainingDays(x, y)
+try:
+    x = float(input("Сколько километров спортсмен пробежал в первый день? "))
+    y = float(input("Сколько километров спортсмен пробежал всего? "))
+    numberOfTrainingDays(x, y)
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
