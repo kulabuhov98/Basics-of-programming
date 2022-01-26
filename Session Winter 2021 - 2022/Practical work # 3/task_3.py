@@ -9,16 +9,20 @@
     Задание 3. Даны два целых числа A и В, A > B. Выведите все нечётные числа от A до B включительно, в порядке убывания.
 """
 
-a = int(input("Введите первое целое число: "))
-b = int(input("Введите второе целое число: "))
-
-def findingOddNumbers(a, b):
+# Нахождение нечетности числа
+def oddNumbers(a, b):
     for i in range(a, b - 1, -1):
         if i % 2 != 0:
             print(i)
 
+try:
+    a = int(input("Введите первое число: "))
+    b = int(input("Введите второе число: "))
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
+
 if a > b:
-    print()
-    findingOddNumbers(a, b)
+    print("Нечетные числа от " + str(a) + " до " + str(b) + ":")
+    oddNumbers(a, b)
 else:
-    print("Первое целое число " + str(a) + " должно быть больше второго целого числа " + str(b) + ".")
+    print("Первое число " + str(a) + " должно быть больше второго числа " + str(b) + ".")
