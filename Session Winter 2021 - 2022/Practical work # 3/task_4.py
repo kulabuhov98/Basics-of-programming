@@ -12,6 +12,7 @@
 
 def sumOfNumbers():
     sum = 0
+    
     for i in range(int(input("Введите количество чисел: "))):
         sum += int(input("Введите " + str(i + 1) + " целое число: "))
     print("Сумма " + str(i + 1) + " введенных целых чисел = " + str(sum))
