@@ -26,6 +26,6 @@ print ("Введите длину свободного конца шнурка: 
 l = int(input())
 
 def desiredLengthOfTheLace(a, b, n, l):
-    return 2 * l + (2 * n - 1) * a + 2 * (n - 1) * b
+    return str(2 * l + (2 * n - 1) * a + 2 * (n - 1) * b)
 
-print ("Искомая длина шнурка: " + str(desiredLengthOfTheLace(a, b, n, l)))
+print ("Искомая длина шнурка: " + desiredLengthOfTheLace(a, b, n, l))
