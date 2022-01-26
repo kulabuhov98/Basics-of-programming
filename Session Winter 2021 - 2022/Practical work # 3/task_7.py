@@ -22,7 +22,6 @@ def sumOfFactorials(n):
     print("Сумма 1!+2!+3!+...+" + str(n) + "! = " + str(sum) + ".")
 
 try:
-    n = int(input("Введите целое число: "))
-    sumOfFactorials(n)
+    sumOfFactorials(int(input("Введите целое число: ")))
 except ValueError:
     print("Critical error! Exception has occurred: ValueError!")
