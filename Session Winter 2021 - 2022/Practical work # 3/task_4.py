@@ -10,11 +10,17 @@
     Постройте решение так, чтобы использовалось минимальное количество переменных.
 """
 
+# Нахождение суммы чисел
 def sumOfNumbers():
     sum = 0
     
     for i in range(int(input("Введите количество чисел: "))):
-        sum += int(input("Введите " + str(i + 1) + " целое число: "))
-    print("Сумма " + str(i + 1) + " введенных целых чисел = " + str(sum))
+        sum += int(input("Введите " + str(i + 1) + " число: "))
+    print("Сумма " + str(i + 1) + " чисел = " + str(sum) + ".")
 
-sumOfNumbers()
+try:
+    sumOfNumbers()
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
+except UnboundLocalError:
+    print("Critical error! Exception has occurred: UnboundLocalError!")
