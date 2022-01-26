@@ -11,8 +11,7 @@
     Решение задачи должно быть выполнено без использования конструкции if и ей подобных.
 """
 
-sourceString = str(input("Введите строку: "))
-
+# Разделение строки и перестановка двух частей местами
 def splitAndSwapString(sourceString):
     sizeString = len(sourceString) // 2 + len(sourceString) % 2
 
@@ -21,4 +20,4 @@ def splitAndSwapString(sourceString):
 
     print(secondPartString + " " + firstPartString)
 
-splitAndSwapString(sourceString)
+splitAndSwapString(str(input("Введите строку: ")))
