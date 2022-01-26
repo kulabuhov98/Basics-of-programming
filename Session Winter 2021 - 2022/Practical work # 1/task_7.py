@@ -17,7 +17,6 @@ def numberParity(number):
         print("Число " + str(number) + " является нечетным.")
 
 try:
-    number = int(input("Введите число: "))
-    numberParity(number)
+    numberParity(int(input("Введите число: ")))
 except ValueError:
     print("Critical error! Exception has occurred: ValueError!")
