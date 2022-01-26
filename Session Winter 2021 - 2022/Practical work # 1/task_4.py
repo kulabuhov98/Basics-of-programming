@@ -14,7 +14,6 @@ def dateFormat(seconds):
     print(str(seconds // 86400) + ":" + str(seconds % 86400 // 3600) + ":" + str(seconds % 3600 // 60) + ":" + str(seconds % 3600 % 60) + ".")
 
 try:
-    seconds = int(input("Введите некоторое количество секунд: "))
-    dateFormat(seconds)
+    dateFormat(int(input("Введите некоторое количество секунд: ")))
 except ValueError:
     print("Critical error! Exception has occurred: ValueError!")
