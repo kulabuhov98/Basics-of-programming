@@ -13,21 +13,28 @@
         Если Абитуериенту меньше 16 вывести на экран сколько лет ему еще учиться в школе.
 """
 
-age = int(input("Введите возраст: "))
-name = str(input("Введите имя: "))
+def ageAnalysis(age, name):
+    if age < 16:
+        print("Сначала нужно окончить школу!")
+        print("Осталось учиться в школе: " + str(16-age) + " лет / год / года.")
+    else:
+        print("Поздравляем Вы поступили в ВГУИТ!")
 
-if age < 16:
-    print("Сначала нужно окончить школу!")
-    print("Осталось учиться в школе: " + str(16-age) + " лет / год / года.")
-else:
-    print("Поздравляем Вы поступили в ВГУИТ!")
+    if age > 0 and age < 75:
+        print("Возраст " + str(age) + " больше 0 и меньше 75.")
+    else:
+        print("Возраст " + str(age) + " не больше 0 и не меньше 75.")
 
-if age > 0 and age < 75:
-    print("Введенный возраст " + str(age) + ". Он находится в промежутке от 0 до 75.")
-else:
-    print("Введенный возраст " + str(age) + ". Он не находится в промежутке от 0 до 75.")
+    if name != "Иван":
+        print("Имя " + str(name) + " != Иван.")
+    else:
+        print("Имя " + str(name) + " == Иван.")
 
-if name != "Иван":
-    print("Введенное имя " + str(name) + ". К сожалению, Вы не Иван =(")
-else:
-    print("Введенное имя " + str(name) + ". Поздравляем, Вы Иван =)")
+try:
+    age = int(input("Введите возраст: "))
+    name = input("Введите имя: ")
+    
+    print()
+    ageAnalysis(age, name)
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
