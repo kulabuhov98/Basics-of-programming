@@ -14,9 +14,9 @@
 # Определение високосного года
 def checkLeapYear(year):
     if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
-        print("Да.")
+        print("Да, год високосный.")
     else:
-        print("Нет.")
+        print("Нет, год не високосный.")
 
 try:
     year = int(input("Введите год: "))
