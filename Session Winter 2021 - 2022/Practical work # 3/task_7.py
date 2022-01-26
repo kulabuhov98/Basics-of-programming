@@ -10,8 +10,7 @@
     Пользоваться математической библиотекой math в этой задаче запрещено.
 """
 
-n = int(input("Введите целое число: "))
-
+# Нахождение сумму факториалов
 def sumOfFactorials(n):
     sum = 0
     factorial = 1
@@ -20,6 +19,10 @@ def sumOfFactorials(n):
         factorial = factorial * i
         sum += factorial
         
-    print("Сумма 1!+2!+3!+...+" + str(n) + "! = " + str(sum))
+    print("Сумма 1!+2!+3!+...+" + str(n) + "! = " + str(sum) + ".")
 
-sumOfFactorials(n)
+try:
+    n = int(input("Введите целое число: "))
+    sumOfFactorials(n)
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
