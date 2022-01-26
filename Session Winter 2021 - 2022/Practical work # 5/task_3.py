@@ -10,9 +10,7 @@
     Выведите показатель степени и саму степень. Операцией возведения в степень пользоваться нельзя!
 """
 
-n = int(input("Введите максимальное число: "))
-i = int(input("Введите число, максимальную степень которого необходимо найти: "))
-
+# Нахождение наибольшей степени числа
 def largestDegreeOfNumber(n, i):
     degreeIndicator = i
     degree = 1
@@ -22,7 +20,12 @@ def largestDegreeOfNumber(n, i):
         degree += 1
     
     print()
-    print("Показатель степени: " + str(degreeIndicator))
-    print("Максимальная степень числа " + str(n) + ": " + str(degree))
+    print("Показатель степени: " + str(degreeIndicator) + ".")
+    print("Максимальная степень числа " + str(n) + ": " + str(degree) + ".")
 
-largestDegreeOfNumber(n, i)
+try:
+    n = int(input("Введите максимальное число: "))
+    i = int(input("Введите число, максимальную степень которого необходимо найти: "))
+    largestDegreeOfNumber(n, i)
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
