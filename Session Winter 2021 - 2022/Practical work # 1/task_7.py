@@ -9,9 +9,15 @@
     Задание 7. Проверьте является ли значение в переменной number - четным.
 """
 
-number = int(input("Введите число: "))
+# Функция проверяет, является ли число четным
+def numberParity(number):
+    if number % 2 == 0:
+        print("Число " + str(number) + " является четным.")
+    else:
+        print("Число " + str(number) + " является нечетным.")
 
-if number % 2 == 0:
-    print("Введенное число " + str(number) + " является четным.")
-else:
-    print("Введенное число " + str(number) + " является нечетным.")
+try:
+    number = int(input("Введите число: "))
+    numberParity(number)
+except ValueError:
+    print("Critical error! Exception has occurred: ValueError!")
