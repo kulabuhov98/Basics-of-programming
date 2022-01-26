@@ -17,9 +17,9 @@ n = int(input())
 def timeOnTheClock(n):
     hours = n // 60
     minutes = n % 60
-    return "Электронные часы в этот момент будут показывать " + str(hours % 24) + ":" + str(minutes)
+    print ("Электронные часы в этот момент будут показывать " + str(hours % 24) + ":" + str(minutes))
 
 if n > 1440:
-    print ("Количество введенных минут " + n + " больше, чем количество минут в сутках 1440.")
+    print ("Количество введенных минут " + str(n) + " больше, чем количество минут в сутках 1440.")
 else:
-    print (timeOnTheClock(n))
+    timeOnTheClock(n)
