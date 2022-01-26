@@ -19,7 +19,6 @@ def checkLeapYear(year):
         print("Нет, год не високосный.")
 
 try:
-    year = int(input("Введите год: "))
-    checkLeapYear(year)
+    checkLeapYear(int(input("Введите год: ")))
 except ValueError:
     print("Critical error! Exception has occurred: ValueError!")
