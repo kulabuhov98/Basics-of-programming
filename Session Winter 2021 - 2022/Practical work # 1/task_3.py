@@ -13,8 +13,8 @@
         Если Абитуериенту меньше 16 вывести на экран сколько лет ему еще учиться в школе.
 """
 
-# Функция анализирует возраст и имя абитуриента
-def ageAnalysis(age, name):
+# Анализатор возраста и имени абитуриента
+def ageAndNameAnalysis(age, name):
     if age < 16:
         print("Сначала нужно окончить школу!")
         print("Осталось учиться в школе: " + str(16-age) + " лет / год / года.")
@@ -36,6 +36,6 @@ try:
     name = input("Введите имя: ")
     
     print()
-    ageAnalysis(age, name)
+    ageAndNameAnalysis(age, name)
 except ValueError:
     print("Critical error! Exception has occurred: ValueError!")
