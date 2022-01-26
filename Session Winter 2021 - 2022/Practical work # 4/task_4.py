@@ -10,13 +10,12 @@
     Результат запишите в строку и выведите получившуюся строку. Решение задачи должно быть выполнено без использования конструкции if и ей подобных.
 """
 
-sourceString = str(input("Введите строку, состоящую из двух слов, разделенных пробелом: "))
-
+# Перестановка двух частей строки местами
 def swapString(sourceString):
     splitString = sourceString.split(" ")
     print(splitString[1] + " " + splitString[0])
-    
+
 try:
-    swapString(sourceString)
+    swapString(str(input("Введите строку, состоящую из двух слов, разделенных пробелом: ")))
 except IndexError:
-    print("Введенная строка не содержит двух слов, разделенных пробелом.")
+    print("Critical error! Exception has occurred: IndexError!")
