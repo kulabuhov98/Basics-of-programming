@@ -10,13 +10,13 @@
     Удалите из этой строки первое и последнее вхождение буквы h, а также все символы, находящиеся между ними.
 """
 
-symbolString = str(input("Введите букву, с которой необходимо выполнить действия: "))
-sourceString = str(input("Введите строку, в которой буква " + symbolString + " встречается минимум два раза: "))
-
+# Удаление первого и последнего вхождения буквы и всех символов, находящихся между ними
 def deleteSymbolFromString(symbolString, sourceString):
     initialEntry = sourceString.find(symbolString)
     finalEntry = sourceString.rfind(symbolString)
 
     print(sourceString[0:initialEntry] + sourceString[finalEntry + 1:])
 
+symbolString = str(input("Введите букву, с которой необходимо выполнить действия: "))
+sourceString = str(input("Введите строку, в которой буква " + symbolString + " встречается минимум два раза: "))
 deleteSymbolFromString(symbolString, sourceString)
