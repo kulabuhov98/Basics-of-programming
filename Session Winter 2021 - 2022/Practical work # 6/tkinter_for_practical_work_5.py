@@ -28,7 +28,6 @@ def largestDegreeOfNumber():
     while degreeIndicator * i < n:
         degreeIndicator *= i
         degree += 1
-    
     messagebox.showinfo("Task # 3", "Показатель степени: " + str(degreeIndicator) + ".")
     messagebox.showinfo("Task # 3", "Максимальная степень числа " + str(n) + ": " + str(degree) + ".")
     
@@ -50,7 +49,6 @@ def numberOfTrainingDays():
     while x < y:
         x += x * 0.1
         day += 1
-    
     messagebox.showinfo("Task # 4", str(y) + " километров пробежал спортсмен за " + str(day) + " дней.")
 
     secondTabEntryX.delete(0, END)
@@ -58,6 +56,20 @@ def numberOfTrainingDays():
 
     secondTabEntryX.focus()
 # Task # 4. Нахождение количества дней тренировок - конец
+
+# Task # 7. Нахождение количества наибольших элементов последовательности - начало
+def numberOfLargestNumbers():
+    startN = int(thirdTabEntryN.get())
+    numberOfElements = 0
+
+    while startN != 0:
+        nextN = int(thirdTabEntryN.get())
+        if nextN != 0 and startN < nextN:
+            numberOfElements += 1
+        startN = nextN
+        thirdTab.update()
+        thindTabLabelResult.config(text = "Количество элементов последовательность больше предыдущего элемента: " + str(numberOfElements) + ".")
+# Task # 7. Нахождение количества наибольших элементов последовательности - конец
 
 # Объект окна верхнего уровня
 window = Tk()
@@ -133,6 +145,14 @@ Button(secondTab, width=50, text="Запустить", command=numberOfTrainingD
 # Формирование основных виджетов к Task # 4 - конец
 
 # Формирование основных виджетов к Task # 7 - начало
+Label(thirdTab, text="Введите последовательность чисел:").pack(pady=(5,0))
+thirdTabEntryN = Entry(thirdTab, width=70)
+thirdTabEntryN.pack()
+
+Button(thirdTab, width=50, text="Запустить", command=numberOfLargestNumbers).pack(pady=(5,0))
+
+thindTabLabelResult = Label(thirdTab, text="Количество элементов последовательность больше предыдущего элемента: NaN")
+thindTabLabelResult.pack(pady=(5,0))
 # Формирование основных виджетов к Task # 7 - конец
 
 # Отображение окна, до момента его закрытия
