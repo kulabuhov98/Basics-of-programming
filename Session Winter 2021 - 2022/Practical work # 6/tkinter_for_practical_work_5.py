@@ -21,6 +21,10 @@ def largestDegreeOfNumber():
         i = int(firstTabEntryI.get())
     except ValueError:
         messagebox.showerror("Task # 3", "Critical error! Exception has occurred: ValueError!")
+        firstTabEntryN.delete(0, END)
+        firstTabEntryI.delete(0, END)
+
+        firstTabEntryN.focus()
 
     degreeIndicator = i
     degree = 1
@@ -44,6 +48,11 @@ def numberOfTrainingDays():
         y = float(secondTabEntryY.get())
     except ValueError:
         messagebox.showerror("Task # 4", "Critical error! Exception has occurred: ValueError!")
+        firstTabEntryN.delete(0, END)
+        firstTabEntryI.delete(0, END)
+
+        firstTabEntryN.focus()
+
     day = 1
 
     while x < y:
@@ -149,7 +158,7 @@ Label(thirdTab, text="Введите последовательность чис
 thirdTabEntryN = Entry(thirdTab, width=70)
 thirdTabEntryN.pack()
 
-Button(thirdTab, width=50, text="Запустить", command=numberOfLargestNumbers).pack(pady=(5,0))
+Button(thirdTab, width=50, text="Запустить / Остановить", command=numberOfLargestNumbers).pack(pady=(5,0))
 
 thindTabLabelResult = Label(thirdTab, text="Количество элементов последовательность больше предыдущего элемента: NaN")
 thindTabLabelResult.pack(pady=(5,0))
