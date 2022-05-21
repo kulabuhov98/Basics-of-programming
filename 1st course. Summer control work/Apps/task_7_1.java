@@ -11,7 +11,7 @@
 import java.util.InputMismatchException; /* Класс для обработки исключения */
 import java.util.Scanner; /* Класс для взаимодействия с пользователем */
 
-public class task_7 {
+public class task_7_1 {
     public static void main(String[] args) {
         float result = 0; /* Переменная для расчета суммы чисел */
         while (true) {
