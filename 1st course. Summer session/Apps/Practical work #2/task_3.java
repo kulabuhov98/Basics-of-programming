@@ -25,7 +25,7 @@ public class task_3 {
 				array[i][j] = secureRandom.nextInt(30) - 15; /* Заполнение двумерного массива случайными значениями */
 				System.out.print(array[i][j] + "\t"); /* Сообщение пользователю */
 			}
-			System.out.println(); /* Служебное сообщение пользователю - пустая строка */
+			System.out.println(); /* Служебное сообщение пользователю */
 		}
 		
 		/*
