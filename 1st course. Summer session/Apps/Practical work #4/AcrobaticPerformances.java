@@ -42,6 +42,6 @@ public class AcrobaticPerformances extends Circus {
         return "\n" + super.toString() +
         		"\nТип акробатики: " + typeAcrobatics +
         		"\nКоличество актеров в акробатических представлениях: " + numberActorsAcrobatics +
-        		"\nИнвентарь в акробатических представлениях: " + inventoryAcrobatics;
+        		"\nИнвентарь в акробатических представлениях: " + inventoryAcrobatics + "\n";
     }
 }
