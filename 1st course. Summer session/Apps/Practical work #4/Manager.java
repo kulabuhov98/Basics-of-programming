@@ -55,6 +55,20 @@ public class Manager {
 				typeAcrobatics, numberActorsAcrobatics, inventoryAcrobatics);
 		manager.addCircusPerformances(acrobaticPerformances);
 		
-		System.out.println(manager.printCuircusPerformances());
+		String typeTraining = "Крупные животные, хищники"; /* вид дрессировки (крупные животные, мелкие животные, птицы, хищники) */
+		Integer numberAnimals = 5; /* Количество животных */
+		Integer numberActorsTraining = 5; /* Количество актеров */
+		Training training = new Training(title, city, date, period, price, author, genre, numberActors,
+				typeTraining, numberAnimals, numberActorsTraining);
+		manager.addCircusPerformances(training);
+		
+		String typeMagicTricks = "Иллюзия"; /* Вид фокусов (иллюзия, манипуляция) */
+		Integer numberMagicTricks = 10; /* Количество актеров */
+		String inventoryMagicTricks = "Стандартный инвертарь, необходимый для выполнения номера"; /* Инвентарь */
+		MagicTricks magicTricks = new MagicTricks(title, city, date, period, price, author, genre, numberActors,
+				typeMagicTricks, numberMagicTricks, inventoryMagicTricks);
+		manager.addCircusPerformances(magicTricks);
+		
+		System.out.print(manager.printCuircusPerformances());
 	}
 }
