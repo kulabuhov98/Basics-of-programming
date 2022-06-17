@@ -32,30 +32,31 @@ public class circus {
         this.numberActors = numberActors;
     }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public String getTitle() { return title; } /* Метод для получения значения атрибута */
+    public void setTitle(String title) { this.title = title; } /* Метод для изменения значения атрибута */
     
-    public String getCity() { return city; }
-    public void setCity(String city) { this.city = city; }
+    public String getCity() { return city; } /* Метод для получения значения атрибута */
+    public void setCity(String city) { this.city = city; } /* Метод для изменения значения атрибута */
     
-    public String getDate() { return date; }
-    public void setDate(String date) { this.date = date; }
+    public String getDate() { return date; } /* Метод для получения значения атрибута */
+    public void setDate(String date) { this.date = date; } /* Метод для изменения значения атрибута */
     
-    public String getPeriod() { return period; }
-    public void setPeriod(String period) { this.period = period; }
+    public String getPeriod() { return period; } /* Метод для получения значения атрибута */
+    public void setPeriod(String period) { this.period = period; } /* Метод для изменения значения атрибута */
     
-    public Integer getPrice() { return price; }
-    public void setPrice(Integer price) { this.price = price; }
+    public Integer getPrice() { return price; } /* Метод для получения значения атрибута */
+    public void setPrice(Integer price) { this.price = price; } /* Метод для изменения значения атрибута */
     
-    public String getAuthor() { return author; }
-    public void setAuthor(String author) { this.author = author; }
+    public String getAuthor() { return author; } /* Метод для получения значения атрибута */
+    public void setAuthor(String author) { this.author = author; } /* Метод для изменения значения атрибута */
     
-    public String getGenre() { return genre; }
-    public void setGenre(String genre) { this.genre = genre; }
+    public String getGenre() { return genre; } /* Метод для получения значения атрибута */
+    public void setGenre(String genre) { this.genre = genre; } /* Метод для изменения значения атрибута */
     
-    public Integer getNumberActors() { return numberActors; }
-    public void setNumberActors(Integer numberActors) { this.numberActors = numberActors; }
+    public Integer getNumberActors() { return numberActors; } /* Метод для получения значения атрибута */
+    public void setNumberActors(Integer numberActors) { this.numberActors = numberActors; } /* Метод для изменения значения атрибута */
     
+    /* Переопределенный стандартный метод для представления объекта в виде строке с более подробной информацией */
     public String toString() {
         return "Впервые с " + date + " в городе " + city + "! Цирковое представление \"" + title + "\" имени " + author + " и его команды " + numberActors +
                 " актеров в жанре " + genre + "! \n" + "Спешите, период проведения " + period + ". Цена билета от " + price + " рублей.";
