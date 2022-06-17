@@ -15,7 +15,7 @@
 
 package circus;
 
-import java.util.ArrayList;
+import java.util.ArrayList; /* Класс для работы со списками (динамическими массивами) */
 
 public class Manager {
 	private ArrayList<Circus> listOfCircusPerformances;
@@ -33,5 +33,28 @@ public class Manager {
 	/* Метод печати списка цирковых представлений */
 	public ArrayList<Circus> printCuircusPerformances() {
 		return listOfCircusPerformances;
+	}
+	
+	public static void main(String[] args) {
+		ArrayList<Circus> listOfCircusPerformances = new ArrayList<>();
+		Manager manager = new Manager(listOfCircusPerformances);
+		
+		String title = "Большое шоу иллюзий"; /* Название представления */
+		String city = "Воронеж"; /* Город */
+	    String date = "18 июня 2022 года"; /* Дата премьеры */
+	    String period = "с 18 июня по 23 августа"; /* Период проведения */
+	    Integer price = 1500; /* Цена билета */
+	    String author = "Михаил Цителашвили"; /* Автор */
+	    String genre = "иллюзий"; /* Жанр */
+	    Integer numberActors = 25; /* Количество актеров */
+	    
+	    String typeAcrobatics = "Силовая акробатика"; /* тип акробатики (силовая акробатика, парная силовая, групповая силовая, пластическая, одинарная и т.д.) */
+		Integer numberActorsAcrobatics = 3; /* Количество актеров */
+		String inventoryAcrobatics = "Стандартный инвертарь, необходимый для выполнения номера"; /* Инвентарь */
+		AcrobaticPerformances acrobaticPerformances = new AcrobaticPerformances(title, city, date, period, price, author, genre, numberActors, 
+				typeAcrobatics, numberActorsAcrobatics, inventoryAcrobatics);
+		manager.addCircusPerformances(acrobaticPerformances);
+		
+		System.out.println(manager.printCuircusPerformances());
 	}
 }
