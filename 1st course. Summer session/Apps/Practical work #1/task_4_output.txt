@@ -1,0 +1,3 @@
+Вас узнали. Добро пожаловать!
+
+** Process exited - Return Code: 0 **
