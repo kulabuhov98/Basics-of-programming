@@ -27,7 +27,7 @@ public class task_4 {
 				System.out.println("\nДвумерный массив или квадратная матрица:"); /* Сообщение пользователю */
 				for (int i = 0; i < array.length; i++) { /* Цикл по строкам */
 					for (int j = 0; j < array.length; j++) { /* Цикл по столбцам */
-						array[i][j] = secureRandom.nextInt(31) - 15; /* Заполнение двумерного массива случайными значениями */
+						array[i][j] = secureRandom.nextInt(30) - 15; /* Заполнение двумерного массива случайными значениями */
 						System.out.print(array[i][j] + "\t"); /* Сообщение пользователю */
 					}
 					System.out.println(); /* Служебное сообщение пользователю - пустая строка */
