@@ -42,6 +42,6 @@ public class MagicTricks extends Circus {
         return "\n" + super.toString() +
         		"\nВид фокуса: " + typeMagicTricks +
         		"\nКоличество актеров в фокусах: " + numberMagicTricks +
-        		"\nИнвентарь в фокусах: " + inventoryMagicTricks;
+        		"\nИнвентарь в фокусах: " + inventoryMagicTricks + "\n";
     }
 }
