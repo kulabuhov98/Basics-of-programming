@@ -42,6 +42,6 @@ public class Training extends Circus {
         return "\n" + super.toString() +
         		"\nВид дрессировки: " + typeTraining +
         		"\nКоличество животных в дрессировках: " + numberAnimals +
-        		"\nКоличество актеров в дрессировках: " + numberActorsTraining;
+        		"\nКоличество актеров в дрессировках: " + numberActorsTraining + "\n";
     }
 }
